@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "name": "Arcade Mod Reloaded",
   "tagline": "Working arcade cabinets in Minecraft: insert coins, play Pellet Muncher, Alien Barrage, Girder Climber, Paddle Rally, Tetrominoes and Snake, win tickets and trade them at the prize counter.",
+  "how_to_play": [
+    "Place arcade cabinets in your world, insert a coin and play to win tickets, then trade them at the Prize Counter.",
+    "Get the machines, coins, tickets and Prize Counter from the Arcade Mod creative tab, place a machine and right-click it.",
+    "Use the arrow keys and Enter in the cabinet menus, Esc to leave.",
+    "Pellet Muncher and Snake: arrows. Alien Barrage: Left/Right move, Up fires. Paddle Rally: Up/Down.",
+    "Tetrominoes: Left/Right move, Up rotates, Down drops faster. Girder Climber: WASD, Space jumps."
+  ],
   "kind": "mod",
   "games": [
     {
