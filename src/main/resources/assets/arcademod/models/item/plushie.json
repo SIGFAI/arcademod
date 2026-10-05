@@ -1,0 +1,1 @@
+{ "parent": "arcademod:block/creeper_plushie", "overrides": [ { "predicate": { "arcademod:mob": 0 }, "model": "arcademod:block/creeper_plushie" }, { "predicate": { "arcademod:mob": 1 }, "model": "arcademod:block/pig_plushie" } ] }

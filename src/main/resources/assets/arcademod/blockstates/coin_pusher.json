@@ -1,0 +1,1 @@
+{ "variants": { "facing=north": { "model": "arcademod:block/coin_pusher", "y": 180 }, "facing=south": { "model": "arcademod:block/coin_pusher" }, "facing=east": { "model": "arcademod:block/coin_pusher", "y": 270 }, "facing=west": { "model": "arcademod:block/coin_pusher", "y": 90 } } }

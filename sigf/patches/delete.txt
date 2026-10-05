@@ -1,0 +1,20 @@
+# Upstream files removed before the generated assets are copied in (paths relative to the upstream root).
+# All are unused by the code at eb09571 and are ripped or derived art.
+src/main/resources/assets/arcademod/textures/arcades/snake_machine.png
+src/main/resources/assets/arcademod/textures/arcades/tetris_machine.png
+src/main/resources/assets/arcademod/textures/kong/a.png
+src/main/resources/assets/arcademod/textures/kong/background-2.jpg
+src/main/resources/assets/arcademod/textures/kong/bar.png
+src/main/resources/assets/arcademod/textures/kong/boost.png
+src/main/resources/assets/arcademod/textures/kong/final.png
+src/main/resources/assets/arcademod/textures/kong/health.png
+src/main/resources/assets/arcademod/textures/kong/ladder.png
+src/main/resources/assets/arcademod/textures/kong/logo.png
+src/main/resources/assets/arcademod/textures/kong/lose.png
+src/main/resources/assets/arcademod/textures/kong/platform.png
+src/main/resources/assets/arcademod/textures/gui/kong.png
+src/main/resources/assets/arcademod/textures/gui/kong.psd
+src/main/resources/assets/arcademod/textures/gui/kong/final.png
+src/main/resources/assets/arcademod/textures/gui/kong/lose.png
+src/main/resources/assets/arcademod/textures/gui/kong/logo.png
+src/main/resources/assets/arcademod/textures/block/plushie/cow.png

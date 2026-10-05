@@ -1,0 +1,137 @@
+diff --git a/SIGF-NOTICE.md b/SIGF-NOTICE.md
+new file mode 100644
+index 0000000..48a5e04
+--- /dev/null
++++ b/SIGF-NOTICE.md
+@@ -0,0 +1,17 @@
++# SIGF modified version
++
++This is a modified version of Arcade Mod Reloaded (https://github.com/Bay4lly/ArcadeMod, commit
++eb09571cf6883651f7516da85682b5e9c9c6b166) by Bay4lly (1.20.1 port) and SuperHB / KenLPham (original 1.12.2 mod),
++licensed under the GNU General Public License v3.0 (see LICENSE). Changes by SIGF, 2026-10-05:
++
++- Replaced the arcade sprite sheets, cabinet textures, Girder Climber textures, plushie and prize counter textures,
++  the mod icon and every sound with original pixel art and chiptune sounds made for SIGF (no assets from Namco,
++  Nintendo, Taito, Atari or any other game). Removed unused textures (`textures/arcades/`, `textures/kong/`,
++  `textures/gui/kong.png`, `textures/gui/kong.psd`, `textures/gui/kong/final.png`, `lose.png`, `logo.png`,
++  `textures/block/plushie/cow.png`).
++- Renamed the games: Pac-Man -> Pellet Muncher, Space Invaders -> Alien Barrage, Kong / Donkey Kong -> Girder Climber,
++  Pong -> Paddle Rally, Tetris -> Tetrominoes (display names only; internal ids unchanged).
++- `gradle.properties`: `mod_license` set to GPL-3.0-only (matches LICENSE), version suffix `-sigf1`, removed the
++  author's local `org.gradle.java.home`.
++
++How the new assets were made: https://github.com/SIGFAI/arcademod (see the SIGF library recipe, PROVENANCE.md).
+diff --git a/gradle.properties b/gradle.properties
+index d112de1..c87aa21 100644
+--- a/gradle.properties
++++ b/gradle.properties
+@@ -9,9 +9,8 @@ mapping_channel=official
+ mapping_version=1.20.1
+ mod_id=arcademod
+ mod_name=Arcade Reloaded
+-mod_license=All Rights Reserved
+-mod_version=1.0-1.20.1
++mod_license=GPL-3.0-only
++mod_version=1.0-1.20.1-sigf1
+ mod_group_id=superhb.arcademod
+ mod_authors=Bay4lly (1.20.1 port), SuperHB (1.12.2 original)
+-mod_description=Adds working arcade machines into Minecraft!
+-org.gradle.java.home=D:/JDK/jdk-17.0.18+8
++mod_description=Adds working arcade machines into Minecraft! SIGF build: all art and sounds replaced with original ones, game names changed.
+diff --git a/src/main/java/superhb/arcademod/client/gui/GuiKong.java b/src/main/java/superhb/arcademod/client/gui/GuiKong.java
+index 1ad138c..82e6002 100644
+--- a/src/main/java/superhb/arcademod/client/gui/GuiKong.java
++++ b/src/main/java/superhb/arcademod/client/gui/GuiKong.java
+@@ -56,7 +56,7 @@ public class GuiKong extends GuiArcade {
+     private Random random = new Random();
+ 
+     public GuiKong(Level world, BlockEntityArcade tile, @Nullable BlockPos pos, Player player) {
+-        super(world, tile, pos, player, Component.literal("Kong"));
++        super(world, tile, pos, player, Component.literal("Girder Climber"));
+         setGuiSize(GAME_WIDTH, GAME_HEIGHT, 0.28F);
+         setTexture(null);
+         setCost(4);
+@@ -366,7 +366,7 @@ public class GuiKong extends GuiArcade {
+ 
+         switch (menu) {
+             case 0:
+-                guiGraphics.drawCenteredString(minecraft.font, Component.translatable("DONKEY KONG"), mX + (w / 2), mY + 20, 0xFF0000);
++                guiGraphics.drawCenteredString(minecraft.font, Component.literal("GIRDER CLIMBER"), mX + (w / 2), mY + 20, 0xFF0000);
+                 // MC splash screen style BETA text
+                 guiGraphics.pose().pushPose();
+                 float betaCenterX = (mX + (w / 2)) + 48;
+diff --git a/src/main/java/superhb/arcademod/client/gui/GuiPacMan.java b/src/main/java/superhb/arcademod/client/gui/GuiPacMan.java
+index 81a8013..e46dfe0 100644
+--- a/src/main/java/superhb/arcademod/client/gui/GuiPacMan.java
++++ b/src/main/java/superhb/arcademod/client/gui/GuiPacMan.java
+@@ -64,7 +64,7 @@ public class GuiPacMan extends GuiArcade {
+     private int dotTick, dotTimeLimit = 80;
+ 
+     public GuiPacMan(Level world, BlockEntityArcade tile, @Nullable BlockPos pos, Player player) {
+-        super(world, tile, pos, player, Component.literal("Pac-Man"));
++        super(world, tile, pos, player, Component.literal("Pellet Muncher"));
+         setGuiSize(GUI_X, GUI_Y, 0.8F);
+         setTexture(TEXTURE, 512, 512);
+         setCost(4);
+diff --git a/src/main/java/superhb/arcademod/client/gui/GuiPong.java b/src/main/java/superhb/arcademod/client/gui/GuiPong.java
+index acc1487..f4a830b 100644
+--- a/src/main/java/superhb/arcademod/client/gui/GuiPong.java
++++ b/src/main/java/superhb/arcademod/client/gui/GuiPong.java
+@@ -53,7 +53,7 @@ public class GuiPong extends GuiArcade {
+     private Random rand = new Random();
+     
+     public GuiPong(Level world, BlockEntityArcade tileEntity, @Nullable BlockPos pos, Player player) {
+-        super(world, tileEntity, pos, player, Component.literal("Pong"));
++        super(world, tileEntity, pos, player, Component.literal("Paddle Rally"));
+         Arcade.logger.info("GuiPong: opened for player " + (player != null ? player.getName().getString() : "null"));
+         setGuiSize(GUI_X, GUI_Y);
+         setCost(1);
+diff --git a/src/main/java/superhb/arcademod/client/gui/GuiSpaceInvaders.java b/src/main/java/superhb/arcademod/client/gui/GuiSpaceInvaders.java
+index 2daf1f9..8e527df 100644
+--- a/src/main/java/superhb/arcademod/client/gui/GuiSpaceInvaders.java
++++ b/src/main/java/superhb/arcademod/client/gui/GuiSpaceInvaders.java
+@@ -54,7 +54,7 @@ public class GuiSpaceInvaders extends GuiArcade {
+     private int deathTick = 0, gameOverTick = 0;
+ 
+     public GuiSpaceInvaders(Level world, BlockEntityArcade tile, @Nullable BlockPos pos, Player player) {
+-        super(world, tile, pos, player, Component.literal("Space Invaders"));
++        super(world, tile, pos, player, Component.literal("Alien Barrage"));
+         setGuiSize(GUI_X, GUI_Y, 0.8F);
+         setTexture(TEXTURE, 512, 512);
+         setCost(4);
+diff --git a/src/main/resources/assets/arcademod/lang/en_us.json b/src/main/resources/assets/arcademod/lang/en_us.json
+index 77511ee..fff19b5 100644
+--- a/src/main/resources/assets/arcademod/lang/en_us.json
++++ b/src/main/resources/assets/arcademod/lang/en_us.json
+@@ -5,9 +5,9 @@
+   "block.arcademod.arcade_machine": "Arcade Machine",
+   "block.arcademod.arcade_machine.snake": "Arcade Machine (Snake)",
+   "block.arcademod.arcade_machine.tetrominoes": "Arcade Machine (Tetrominoes)",
+-  "block.arcademod.arcade_machine.pacman": "Arcade Machine (Pac-Man)",
+-  "block.arcademod.arcade_machine.pong": "Arcade Machine (Pong)",
+-  "block.arcademod.arcade_machine.spaceinvaders": "Arcade Machine (Space Invaders)",
++  "block.arcademod.arcade_machine.pacman": "Arcade Machine (Pellet Muncher)",
++  "block.arcademod.arcade_machine.pong": "Arcade Machine (Paddle Rally)",
++  "block.arcademod.arcade_machine.spaceinvaders": "Arcade Machine (Alien Barrage)",
+   "block.arcademod.coin_pusher": "Coin Pusher Machine",
+   "block.arcademod.plushie": "Plushie",
+   "block.arcademod.plushie.creeper": "Creeper Plushie",
+@@ -44,12 +44,12 @@
+   "option.arcademod.difficulty.hard": "Hard",
+   "option.arcademod.difficulty.extreme": "Extreme",
+   "game.arcademod.snake": "Snake",
+-  "game.arcademod.tetrominoes": "Tetris",
+-  "game.arcademod.pacman": "Pac-Man",
+-  "game.arcademod.pong": "Pong",
+-  "game.arcademod.spaceinvaders": "Space Invaders",
+-  "game.arcademod.kong": "Kong",
+-  "block.arcademod.arcade_machine.kong": "Arcade Machine (Kong)",
++  "game.arcademod.tetrominoes": "Tetrominoes",
++  "game.arcademod.pacman": "Pellet Muncher",
++  "game.arcademod.pong": "Paddle Rally",
++  "game.arcademod.spaceinvaders": "Alien Barrage",
++  "game.arcademod.kong": "Girder Climber",
++  "block.arcademod.arcade_machine.kong": "Arcade Machine (Girder Climber)",
+   "control.arcademod.up.name": "Up",
+   "control.arcademod.down.name": "Down",
+   "control.arcademod.left.name": "Left/Back",

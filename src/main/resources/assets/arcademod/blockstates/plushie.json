@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,mob=creeper": {
+      "model": "arcademod:block/creeper_plushie",
+      "y": 180
+    },
+    "facing=south,mob=creeper": {
+      "model": "arcademod:block/creeper_plushie"
+    },
+    "facing=east,mob=creeper": {
+      "model": "arcademod:block/creeper_plushie",
+      "y": 270
+    },
+    "facing=west,mob=creeper": {
+      "model": "arcademod:block/creeper_plushie",
+      "y": 90
+    },
+    "facing=north,mob=pig": {
+      "model": "arcademod:block/pig_plushie",
+      "y": 180
+    },
+    "facing=south,mob=pig": {
+      "model": "arcademod:block/pig_plushie"
+    },
+    "facing=east,mob=pig": {
+      "model": "arcademod:block/pig_plushie",
+      "y": 270
+    },
+    "facing=west,mob=pig": {
+      "model": "arcademod:block/pig_plushie",
+      "y": 90
+    }
+  }
+}
