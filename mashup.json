@@ -1,0 +1,89 @@
+{
+  "id": "sigf/arcademod",
+  "version": "1.0.0",
+  "name": "Arcade Mod Reloaded",
+  "tagline": "Working arcade cabinets in Minecraft: insert coins, play Pellet Muncher, Alien Barrage, Girder Climber, Paddle Rally, Tetrominoes and Snake, win tickets and trade them at the prize counter.",
+  "kind": "mod",
+  "games": [
+    {
+      "game": "minecraft",
+      "role": "host",
+      "label": "Minecraft",
+      "engine": "Minecraft Java 1.20.1 + Forge 47.1.0 mod (Java)",
+      "mc": "1.20.1",
+      "loader": "forge@47.1.0",
+      "java": "17"
+    }
+  ],
+  "requires": [
+    {
+      "id": "forge",
+      "version": "47.1.0"
+    }
+  ],
+  "install": [
+    {
+      "game": "minecraft",
+      "strategy": "mrpack",
+      "pack": {
+        "src": "arcademod.mrpack",
+        "url": "https://github.com/SIGFAI/arcademod/releases/download/v1.0.0/arcademod.mrpack",
+        "sha256": "7fc51c8d842a139e18d0d3ea21b5244953ae4a062af78a0278bdf3c76beb0868",
+        "size": 1566464
+      }
+    }
+  ],
+  "launch": [
+    {
+      "game": "minecraft"
+    }
+  ],
+  "files": [
+    {
+      "name": "arcademod.mrpack",
+      "url": "https://github.com/SIGFAI/arcademod/releases/download/v1.0.0/arcademod.mrpack",
+      "sha256": "7fc51c8d842a139e18d0d3ea21b5244953ae4a062af78a0278bdf3c76beb0868",
+      "size": 1566464
+    }
+  ],
+  "source": {
+    "repo": "https://github.com/Bay4lly/ArcadeMod",
+    "license": "GPL-3.0",
+    "upstream_license": "GPL-3.0 (LICENSE; mods.toml said All Rights Reserved, the Forge MDK default)",
+    "commit": "eb09571cf6883651f7516da85682b5e9c9c6b166",
+    "hosted": "https://github.com/SIGFAI/arcademod",
+    "derived_from": {
+      "repo": "https://github.com/KenLPham/ArcadeMod",
+      "license": "GPL-3.0",
+      "note": "original 1.12.2 mod by SuperHB (KenLPham)"
+    },
+    "built": {
+      "by": "SIGF",
+      "commit": "eb09571cf6883651f7516da85682b5e9c9c6b166",
+      "builder": "AWS EC2 i-07436d854aba1942b (c6i.xlarge, Amazon Linux 2023, Corretto 17, Gradle 8.8 official zip; terminated after the build)",
+      "artifacts": {
+        "arcademod-1.0-1.20.1-sigf1.jar": "759206243e2f21a84d194d0d05b8bcbf47804cb4ee069babfcb1ea09fc6a9ee2"
+      }
+    },
+    "modified": "every ripped or unclear texture and sound replaced with original SIGF assets; game names changed (library/arcademod/assets/PROVENANCE.md)"
+  },
+  "media": {},
+  "built_by": {
+    "author": "Bay4lly",
+    "authors": [
+      "Bay4lly",
+      "KenLPham"
+    ],
+    "packaged_by": "SIGF"
+  },
+  "idea_by": "KenLPham",
+  "built_at": "2026-10-05T00:00:00.000Z",
+  "status": "beta",
+  "issues": "https://github.com/SIGFAI/arcademod/issues",
+  "notes": [
+    "You need Minecraft: Java Edition. The app makes its own Prism instance \"sigf-arcademod\" (Minecraft 1.20.1, Forge 47.1.0, Java 17).",
+    "Craft coins, place an arcade machine, right-click it and insert a coin. Scores pay out tickets; spend them at the Prize Counter (plushies, diamonds and more).",
+    "SIGF build: the cabinets, sprites, sounds and icon were redrawn and recomposed from scratch and the games renamed (Pellet Muncher, Alien Barrage, Girder Climber, Paddle Rally, Tetrominoes); gameplay is unchanged from the upstream port.",
+    "Beta: a fresh port of an old mod (the Girder Climber cabinet says BETA in game). Report bugs on the SIGF fork's issue tracker."
+  ]
+}
