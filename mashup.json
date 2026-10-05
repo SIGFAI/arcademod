@@ -4,10 +4,10 @@
   "name": "Arcade Mod Reloaded",
   "tagline": "Working arcade cabinets in Minecraft: insert coins, play Pellet Muncher, Alien Barrage, Girder Climber, Paddle Rally, Tetrominoes and Snake, win tickets and trade them at the prize counter.",
   "how_to_play": [
-    "Place arcade cabinets in your world, insert a coin and play to win tickets, then trade them at the Prize Counter.",
-    "Get the machines, coins, tickets and Prize Counter from the Arcade Mod creative tab, place a machine and right-click it.",
-    "Use the arrow keys and Enter in the cabinet menus, Esc to leave.",
-    "Pellet Muncher and Snake: arrows. Alien Barrage: Left/Right move, Up fires. Paddle Rally: Up/Down.",
+    "Place working arcade cabinets in your Minecraft world, insert a coin and play a 2D arcade game; scores pay out tickets you spend at the Prize Counter.",
+    "Press Play: Minecraft 1.20.1 starts. In a world, take the machines, coins, tickets and Prize Counter from the \"Arcade Mod\" creative tab.",
+    "Place a machine, right-click it and insert a coin. Arrow keys and Enter work the menus, Esc leaves.",
+    "Pellet Muncher, Snake: arrows. Alien Barrage: Left/Right move, Up fires. Paddle Rally: Up/Down.",
     "Tetrominoes: Left/Right move, Up rotates, Down drops faster. Girder Climber: WASD, Space jumps."
   ],
   "kind": "mod",
@@ -88,9 +88,6 @@
   "status": "beta",
   "issues": "https://github.com/SIGFAI/arcademod/issues",
   "notes": [
-    "How it works: you place working arcade cabinets in your Minecraft world, right-click one, insert a coin and play a 2D arcade game on its screen; scores pay out tickets you spend at the Prize Counter.",
-    "Press Play: Minecraft 1.20.1 (Forge) starts. In a world, take the machines, coins, tickets and Prize Counter from the \"Arcade Mod\" creative tab, place a machine, right-click it and insert a coin.",
-    "Keys: arrow keys and Enter in the menus, Esc to leave. Pellet Muncher, Snake: arrows. Alien Barrage: Left/Right move, Up fires. Tetrominoes: Left/Right move, Up rotates, Down drops faster. Paddle Rally: Up/Down. Girder Climber: WASD, Space jumps.",
     "You need Minecraft: Java Edition; everything else is set up by SIGF.",
     "The crafting recipes sit in an old folder that Minecraft 1.20.1 does not read, so use the creative tab to get machines and coins. The games are renamed look-alikes with new art and sound; gameplay is the upstream port's.",
     "Beta: a fresh port of an old mod (the Girder Climber cabinet says BETA in game). Report bugs on the SIGF fork's issue tracker."
