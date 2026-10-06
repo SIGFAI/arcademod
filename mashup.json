@@ -90,6 +90,7 @@
   "notes": [
     "You need Minecraft: Java Edition; everything else is set up by SIGF.",
     "The crafting recipes sit in an old folder that Minecraft 1.20.1 does not read, so use the creative tab to get machines and coins. The games are renamed look-alikes with new art and sound; gameplay is the upstream port's.",
-    "Beta: a fresh port of an old mod (the Girder Climber cabinet says BETA in game). Report bugs on the SIGF fork's issue tracker."
+    "Beta: a fresh port of an old mod (the Girder Climber cabinet says BETA in game). Report bugs on the SIGF fork's issue tracker.",
+    "No free SIGF server for this mod: SIGF servers run Fabric, and ArcadeMod is a Forge 1.20.1 mod."
   ]
 }
